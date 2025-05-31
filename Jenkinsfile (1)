@@ -8,7 +8,7 @@ pipeline {
     stages { 
         stage('Checkout') { 
             steps {  
-                'https://github.com/ahsham-code/check.git'
+                git 'https://github.com/ahsham-code/check.git'
             } 
         } 
  
