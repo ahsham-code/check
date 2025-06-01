@@ -2,7 +2,7 @@ trigger:
   - main
 
 pool:
-  name: 'pool' # Your self-hosted agent pool name
+  name: 'hot' # Your self-hosted agent pool name
 
 steps:
   # Step 1: Checkout the Code from GitHub
@@ -17,6 +17,7 @@ steps:
   - task: PublishTestResults@2
     inputs:
       testResultsFiles: '**/target/surefire-reports/TEST-*.xml'
+
       testResultsFormat: 'JUnit'
       failTaskOnMissingResultsFile: true
     displayName: 'Publish Maven Test Results'
